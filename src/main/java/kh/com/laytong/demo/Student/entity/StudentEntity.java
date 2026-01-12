@@ -1,4 +1,4 @@
-package kh.com.laytong.demo.RegisterStudents.entity;
+package kh.com.laytong.demo.Student.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "students")
-public class RegisterStudentEntity {
+public class StudentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

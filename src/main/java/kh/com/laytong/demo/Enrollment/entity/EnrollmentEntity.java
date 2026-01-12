@@ -2,7 +2,7 @@ package kh.com.laytong.demo.Enrollment.entity;
 
 import jakarta.persistence.*;
 import kh.com.laytong.demo.Course.entity.CourseEntity;
-import kh.com.laytong.demo.RegisterStudents.entity.RegisterStudentEntity;
+import kh.com.laytong.demo.Student.entity.StudentEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +26,7 @@ public class EnrollmentEntity {
 
     @ManyToOne
     @JoinColumn(name = "register_student_entity_id")
-    private RegisterStudentEntity registerStudentEntity;
+    private StudentEntity studentEntity;
     @ManyToOne
     @JoinColumn(name = "course_entity_id")
     private CourseEntity courseEntity;
