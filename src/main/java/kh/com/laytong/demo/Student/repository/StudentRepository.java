@@ -1,4 +1,7 @@
 package kh.com.laytong.demo.Student.repository;
 
-public class StudentRepository {
+import kh.com.laytong.demo.Student.entity.StudentEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
 }

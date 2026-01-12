@@ -12,8 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegisterStudent {
-    private Long id;
-    private String userNAme;
+    private String firstName;
     private String lastName;
     private String email;
     private LocalDate enrollmentDate;
