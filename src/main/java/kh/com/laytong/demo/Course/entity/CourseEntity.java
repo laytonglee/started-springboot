@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -26,5 +28,9 @@ public class CourseEntity {
 
     @Column(name="description", nullable = false)
     private String description;
+
+    @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT now()")
+    private LocalDateTime createdAt;
+
 
 }
