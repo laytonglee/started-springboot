@@ -43,4 +43,8 @@ public class StudentEntity {
     @JoinColumn(name = "department_id")
     private DepartmentEntity departmentEntity;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    private StudentProfileEntity profile;
+
 }
