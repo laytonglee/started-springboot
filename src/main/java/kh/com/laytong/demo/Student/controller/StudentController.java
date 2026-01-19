@@ -5,6 +5,7 @@ import kh.com.laytong.demo.Student.dto.ResponseStudent;
 import kh.com.laytong.demo.Student.entity.StudentEntity;
 import kh.com.laytong.demo.Student.entity.StudentStatus;
 import kh.com.laytong.demo.Student.service.StudentService;
+import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
@@ -61,7 +62,12 @@ public class StudentController {
 
         return new ResponseEntity<>(studentWithDepartmentAndStatus, HttpStatus.OK);
     }
-
+//
+//    @GetMapping("/start-date")
+//    public ResponseEntity<List<ResponseStudent>> getByDate() {
+//        List<ResponseStudent> studentWithDate =  studentService.queryByDate();
+//        return new ResponseEntity<>(studentWithDate, HttpStatus.OK);
+//    }
 
 }
 
