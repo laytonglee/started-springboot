@@ -15,6 +15,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "students")
+
+
 public class StudentEntity {
 
     @Id
@@ -32,6 +34,10 @@ public class StudentEntity {
 
     @Column(name = "enrollment_date", nullable = false)
     private LocalDate enrollmentDate;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = true)
+    private StudentStatus status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")

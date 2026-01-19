@@ -37,6 +37,7 @@ public class StudentService {
         student.setLastName(request.getLastName());
         student.setEnrollmentDate(request.getEnrollmentDate());
         student.setDepartmentEntity(department);
+        student.setStatus(request.getStatus());
 
         StudentEntity saved = studentRepository.save(student);
 
@@ -45,6 +46,7 @@ public class StudentService {
         response.setFirstName(saved.getFirstName());
         response.setLastName(saved.getLastName());
         response.setDepartmentName(department.getName());
+        response.setStatus(saved.getStatus());
 
         return response;
 
